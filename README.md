@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <img src="https://lil-hub.vercel.app/lil-mascot.png" width="100" alt="LIL Hub Logo">
 </p>  # $LIL Hub
 
