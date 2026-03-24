@@ -168,7 +168,7 @@ export default async function Dashboard() {
         />
 
         {/* Action Bar */}
-        <div className="flex flex-wrap gap-2 mt-4 mb-4">
+        <div className="flex flex-wrap justify-center gap-2 py-6">
           <a href={BUY_URL} target="_blank" rel="noopener noreferrer"
             className={`${btnBase} bg-emerald-950 border-emerald-700 text-emerald-300 hover:bg-emerald-900`}>
             🛒 Buy $LIL
@@ -223,7 +223,9 @@ export default async function Dashboard() {
                 <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">LP Pair</span> — $LIL liquidity provided on Pharaoh Exchange.</p>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-base leading-none mt-0.5">🐔</span>
+                <div className="h-5 w-5 min-w-[20px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center mt-0.5">
+                  <img src="/token.png" className="h-full w-full object-cover" alt="token" />
+                </div>
                 <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Circulating</span> — Supply currently held in user wallets (idle).</p>
               </div>
             </div>
