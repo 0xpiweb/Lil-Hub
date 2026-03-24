@@ -1,97 +1,37 @@
-# $LIL Stats Hub
+# 🐔 $LIL Hub
 
-Dark-mode Next.js dashboard for the $LIL token ecosystem, hosted on Vercel with Supabase for daily snapshots.
+The **$LIL Hub** is a live data terminal and action center for the $LIL ecosystem. It provides a consolidated view of on-chain metrics and a "Front Door" for users to interact with ecosystem functions directly.
 
----
-
-## Stack
-
-- **Next.js 14** (App Router, server components)
-- **Tailwind CSS** — dark-mode UI
-- **Supabase** — stores daily snapshots, provides 24h deltas
-- **Vercel** — hosting + cron job (free tier)
+🔗 **[Live Dashboard](https://lil-hub.vercel.app/)**
 
 ---
 
-## Local development
-
-```bash
-npm install
-npm run dev
-# → http://localhost:3000
-```
-
-Seed your first snapshot (needed for 24h deltas to appear):
-
-```bash
-curl -X POST \
-  -H "Authorization: Bearer YOUR_CRON_SECRET" \
-  http://localhost:3000/api/snapshot
-```
+### 🛠 Core Features
+* **Live Supply Tracking:** Real-time monitoring of $LIL within **The Moat**, specifically tracking **Staked**, **Locked**, and **Burned** balances.
+* **Dynamic Analytics:** Every metric includes live **24h variations**, providing immediate feedback on ecosystem momentum and burn velocity.
+* **Integrated Action Center:** A unified workflow for all user actions:
+    * **Buy $LIL** (Pharaoh Exchange)
+    * **Add Liquidity** (LP Pair)
+    * **Stake & Lock** (The Moat)
+    * **Burn** (Deflationary Engine)
+* **Community-Driven UI:** Features like the **Percentage Supply Breakdown** were implemented based on direct requests from our holders to simplify the visualization of our deflationary mechanics.
 
 ---
 
-## Environment variables
+### 📊 Moat Infrastructure Integration
+The Hub is designed as an extension of **The Moat**, translating public smart contract data into a transparent "System Legend."
 
-Add all of these to your **Vercel Dashboard → Project → Settings → Environment Variables**:
-
-| Variable | Value |
-|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | `https://hggnizhesclzqbqqnkoh.supabase.co` |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | your Supabase anon key |
-| `LIL_TOKEN_ADDRESS` | `0x22683BbaDD01473969F23709879187705a253763` |
-| `DEAD_ADDRESS` | `0x000000000000000000000000000000000000dEaD` |
-| `LP_ADDRESS` | `0x8acc49857A1259D25eb3CA0aa15B398D0E149EF2` |
-| `AVAX_RPC_URL` | `https://api.avax.network/ext/bc/C/rpc` |
-| `EVENTS_API_BASE` | `https://api.moats.app/api` |
-| `MOAT_ADDRESS` | `0x7a4d20261a765bd9ba67d49fbf8189843eec3393` |
-| `CRON_SECRET` | any random string — run `openssl rand -hex 32` to generate one |
+* **Audit-Ready:** Provides an up-to-the-minute audit of the **372M+ $LIL** burned within the Moat infrastructure.
+* **Supply Basis:** Calculations are based on the **1.35B $LIL** total supply established during the March 2025 migration.
 
 ---
 
-## Supabase table
-
-Run this once in **Supabase → SQL Editor**:
-
-```sql
-create table lil_stats (
-  id          bigserial primary key,
-  created_at  timestamptz default now(),
-  staked      numeric not null,
-  locked      numeric not null,
-  burned      numeric not null,
-  dead        numeric not null,
-  lp          numeric not null,
-  circulating numeric not null
-);
-```
+### 💻 Tech Stack
+* **Frontend:** Next.js / React / Tailwind CSS
+* **Data:** DexScreener API (Price/Liquidity) & On-chain Contract State (The Moat)
+* **Deployment:** Vercel
 
 ---
 
-## Deploy to Vercel from GitHub
-
-```bash
-# Inside the web/ folder:
-git init
-git remote add origin https://github.com/0xpiweb/lil-stats-hub.git
-git add .
-git commit -m "Initial commit: $LIL Stats Hub"
-git push -u origin main
-```
-
-Then in Vercel:
-1. **New Project** → Import `0xpiweb/lil-stats-hub`
-2. Set **Root Directory** → `web`
-3. Add all environment variables from the table above
-4. Click **Deploy**
-
-The `vercel.json` cron fires at **00:00 UTC every day**, POSTing to `/api/snapshot` to insert a new Supabase row. After two rows exist the dashboard shows 24h deltas automatically.
-
----
-
-## API reference
-
-| Route | Method | Auth | Description |
-|---|---|---|---|
-| `/api/stats` | GET | none | Live stats, revalidates every 60s |
-| `/api/snapshot` | POST | `Authorization: Bearer <CRON_SECRET>` | Insert current stats into Supabase |
+### 📜 Ecosystem Portfolio
+This tool is part of the **$LIL Ecosystem** (est. March 2025), a community-first project on the Avalanche blockchain dedicated to transparency and long-term capital efficiency.
