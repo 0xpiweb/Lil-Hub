@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 interface StatCardProps {
   icon: string;
   iconSrc?: string;   // optional image path — overrides emoji icon when set
@@ -32,7 +30,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
       <div className="flex items-center justify-between">
         <span className="text-zinc-400 text-sm font-medium flex items-center gap-1.5">
           {iconSrc
-            ? <div className="rounded-full overflow-hidden w-5 h-5 flex-shrink-0"><Image src={iconSrc} alt={label} width={20} height={20} className="object-cover w-full h-full" /></div>
+            ? <div className="h-6 w-6 min-w-[24px] rounded-full overflow-hidden flex-shrink-0"><img src={iconSrc} alt={label} className="h-full w-full object-contain" /></div>
             : <span>{icon}</span>
           }
           {label}
@@ -60,7 +58,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
 
       {provenance && (
         <span
-          className="absolute bottom-3 right-3 text-base opacity-80 select-none"
+          className="absolute bottom-3 right-3 text-[14px] opacity-90 select-none"
           title="Sourced from Fortifi Moat"
         >
           {provenance}

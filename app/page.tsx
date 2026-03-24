@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { fetchMoatEvents } from '@/lib/fetchMoatEvents';
 import { fetchChainBalances } from '@/lib/fetchChainBalances';
 import { supabase, LilStatsRow } from '@/lib/supabase';
@@ -86,8 +85,8 @@ export default async function Dashboard() {
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
-            <div className="rounded-full overflow-hidden w-10 h-10 flex-shrink-0">
-              <Image src="/lil-mascot.png" alt="$LIL mascot" width={40} height={40} className="object-cover w-full h-full" />
+            <div className="h-8 w-8 min-w-[32px] rounded-full overflow-hidden">
+              <img src="/lil-mascot.png" alt="$LIL mascot" className="h-full w-full object-cover" />
             </div>
             $LIL Stats Hub
           </h1>
