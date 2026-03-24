@@ -13,14 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "$LIL Hub",
-  description: "Live supply and moat metrics for the $LIL token ecosystem",
-  metadataBase: new URL("https://lil-hub.vercel.app"),
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "$LIL Hub",
-    description: "Live supply and moat metrics for the $LIL token ecosystem",
-    url: "https://lil-hub.vercel.app/",
+  title: '$LIL Hub',
+  description: 'Live ecosystem terminal for $LIL',
+  icons: {
+    icon: '/token.png', // This points to public/token.png
+    shortcut: '/token.png',
+    apple: '/token.png',
   },
 };
 
