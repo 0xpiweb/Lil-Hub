@@ -20,7 +20,9 @@ export async function POST(req: NextRequest) {
 
     const { staked, locked, burned } = moat;
     const { dead, lp } = chain;
-    const circulating = TOTAL_SUPPLY - (staked + locked + burned + dead + lp);
+    
+    // The 'dead' variable already contains 'burned', so we don't add 'burned' here.
+    const circulating = TOTAL_SUPPLY - (staked + locked + dead + lp);     
 
     const { error } = await supabase.from('lil_stats').insert({
       staked:      Math.round(staked),
@@ -28,6 +30,7 @@ export async function POST(req: NextRequest) {
       burned:      Math.round(burned),
       dead:        Math.round(dead),
       lp:          Math.round(lp),
+      total_supply: TOTAL_SUPPLY, // Added this so the DB records the supply cap
       circulating: Math.round(circulating),
     });
 
