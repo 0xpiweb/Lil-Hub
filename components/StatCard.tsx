@@ -30,7 +30,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
       <div className="flex items-center justify-between">
         <span className="text-zinc-400 text-sm font-medium flex items-center gap-1.5">
           {iconSrc
-            ? <img src={iconSrc} alt={label} className="h-7 w-7 object-contain flex-shrink-0" />
+            ? <img src={iconSrc} alt={label} className="h-6 w-6 object-contain flex-shrink-0" />
             : <span>{icon}</span>
           }
           {label}
