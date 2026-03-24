@@ -131,6 +131,32 @@ export default async function Dashboard() {
           circulating={stats.circulating}
         />
         
+        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mt-4">
+          <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-3">System Legend</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5">🏰</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Staked</span> — Amount of $LIL staked in The Moat. <a href="https://moats.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Moat</a></p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5">🏰</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Locked</span> — Amount of $LIL locked in The Moat. <a href="https://moats.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Moat</a></p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5">🏰</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Burned</span> — Amount of $LIL burned in The Moat. <a href="https://moats.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Moat</a></p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5">🔥💀</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Total Burned</span> — Cumulative total of all burned $LIL (Community + Ecosystem). <a href="https://snowtrace.io/address/0x000000000000000000000000000000000000dEaD" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Dead Wallet</a></p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5">⚖️</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">LP Pair</span> — $LIL liquidity provided on Pharaoh Exchange. <a href="https://pharaoh.exchange" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Add Liquidity</a></p>
+            </div>
+          </div>
+        </div>
+
         <p className="text-center text-zinc-600 text-xs mt-8">
           Last live check: {updatedAt}
         </p>
