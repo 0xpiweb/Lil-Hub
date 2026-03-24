@@ -84,8 +84,8 @@ export default async function Dashboard() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
-            <div className="h-8 w-8 min-w-[32px] rounded-full overflow-hidden">
+          <h1 className="text-3xl font-bold tracking-tight flex items-center gap-4">
+            <div className="h-10 w-10 min-w-[40px] rounded-full overflow-hidden">
               <img src="/lil-mascot.png" alt="$LIL mascot" className="h-full w-full object-cover" />
             </div>
             $LIL Stats Hub
