@@ -107,7 +107,7 @@ export default async function Dashboard() {
           <StatCard icon="🔐" label="Locked"      value={stats.locked}      pct={stats.lockedPct}      delta={delta.locked}      provenance="🏰" />
           <StatCard icon="🔥" label="Burned"      value={stats.burned}      pct={stats.burnedPct}      delta={delta.burned}      provenance="🏰" />
           <StatCard icon="🔥" label="Total Burned" value={stats.dead}        pct={stats.deadPct}        delta={delta.dead}        provenance="💀" />
-          <StatCard icon="⚖️" label="LP Pair"     value={stats.lp}          pct={stats.lpPct}          delta={delta.lp}          provenanceSrc="https://raw.githubusercontent.com/pharaoh-exchange/assets/main/pharaoh-logo.png" />
+          <StatCard icon="⚖️" label="LP Pair"     value={stats.lp}          pct={stats.lpPct}          delta={delta.lp}          provenanceSrc="/pharaoh.svg" />
           <StatCard icon="" iconSrc="/token.png" label="Circulating" value={stats.circulating} pct={stats.circulatingPct} delta={delta.circulating} />
         </div>
 
@@ -151,7 +151,7 @@ export default async function Dashboard() {
             <div className="flex-1 flex flex-col gap-3">
               <div className="flex items-start gap-2">
                 <span className="text-base leading-none mt-0.5">🔥</span>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Total Burned</span> — Cumulative total of $LIL burned. <a href="https://snowtrace.io/address/0x000000000000000000000000000000000000dEaD" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Dead Wallet</a></p>
+                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Total Burned</span> — Cumulative total of $LIL burned. <a href="https://snowtrace.io/token/0x22683BbaDD01473969F23709879187705a253763?a=0x000000000000000000000000000000000000dead" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Dead Wallet</a></p>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-base leading-none mt-0.5">⚖️</span>
