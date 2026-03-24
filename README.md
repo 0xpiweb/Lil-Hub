@@ -1,8 +1,7 @@
-<p align="left">
-  <img src="https://lil-hub.vercel.app/lil-mascot.png" width="100" alt="LIL Hub Logo">
-</p>  # $LIL Hub
+![LIL Hub Banner](https://lil-hub.vercel.app/LIL%20banner.jpeg)
 
-The **$LIL Hub** is a live data terminal and action center for the $LIL ecosystem. It provides a consolidated view of on-chain metrics and a "Front Door" for users to interact with ecosystem functions directly.
+# $LIL Hub
+> The live data terminal and action center for the $LIL ecosystem.
 
 🔗 **[Live Dashboard](https://lil-hub.vercel.app/)**
 
