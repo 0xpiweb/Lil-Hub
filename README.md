@@ -1,4 +1,4 @@
-![LIL Hub Banner](https://lil-hub.vercel.app/LIL%20banner.jpeg)
+![LIL Hub Banner](https://raw.githubusercontent.com/0xpiweb/Lil-Hub/main/public/banner.jpg)
 
 # $LIL Hub
 > The live data terminal and action center for the $LIL ecosystem.
