@@ -8,7 +8,7 @@ import SupplyBar from '@/components/SupplyBar';
 const TOTAL_SUPPLY = 1_350_000_000;
 const MOAT_URL   = 'https://moats.app/moat/0x7a4d20261a765bd9ba67d49fbf8189843eec3393';
 const BURN_URL   = 'https://snowtrace.io/token/0x22683BbaDD01473969F23709879187705a253763?a=0x000000000000000000000000000000000000dead';
-const BUY_URL    = 'https://pharaoh.exchange/swap?outputCurrency=0x22683BbaDD01473969F23709879187705a253763';
+const BUY_URL    = 'https://pharaoh.exchange/swap?outputCurrency=0x22683BbaDD01473969F23709879187705a253763&to=0x22683BbaDD01473969F23709879187705a253763';
 const LP_URL     = 'https://pharaoh.exchange/liquidity/v2/0x8acc49857a1259d25eb3ca0aa15b398d0e149ef2';
 
 function pct(value: number): string {
@@ -120,34 +120,6 @@ export default async function Dashboard() {
           </p>
         </div>
 
-        {/* Action Bar */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          <a href={BUY_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-emerald-950 border-emerald-700 text-emerald-300 hover:bg-emerald-900`}>
-            🛒 Buy $LIL
-          </a>
-          <a href={LP_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-yellow-950 border-yellow-700 text-yellow-300 hover:bg-yellow-900`}>
-            ⚖️ Add Liquidity
-          </a>
-          <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-blue-950 border-blue-700 text-blue-300 hover:bg-blue-900`}>
-            🏰 Stake
-          </a>
-          <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-violet-950 border-violet-700 text-violet-300 hover:bg-violet-900`}>
-            🔐 Lock
-          </a>
-          <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-orange-950 border-orange-700 text-orange-300 hover:bg-orange-900`}>
-            🔥 Burn
-          </a>
-          <a href={BURN_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-red-950 border-red-800 text-red-300 hover:bg-red-900`}>
-            💀 View Total Burn
-          </a>
-        </div>
-
         {/* Market Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
           {[
@@ -195,6 +167,34 @@ export default async function Dashboard() {
           circulating={stats.circulating}
         />
 
+        {/* Action Bar */}
+        <div className="flex flex-wrap gap-2 mt-4 mb-4">
+          <a href={BUY_URL} target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-emerald-950 border-emerald-700 text-emerald-300 hover:bg-emerald-900`}>
+            🛒 Buy $LIL
+          </a>
+          <a href={LP_URL} target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-yellow-950 border-yellow-700 text-yellow-300 hover:bg-yellow-900`}>
+            ⚖️ Add Liquidity
+          </a>
+          <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-blue-950 border-blue-700 text-blue-300 hover:bg-blue-900`}>
+            🏰 Stake
+          </a>
+          <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-violet-950 border-violet-700 text-violet-300 hover:bg-violet-900`}>
+            🔐 Lock
+          </a>
+          <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-orange-950 border-orange-700 text-orange-300 hover:bg-orange-900`}>
+            🔥 Burn
+          </a>
+          <a href={BURN_URL} target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-red-950 border-red-800 text-red-300 hover:bg-red-900`}>
+            💀 View Total Burn
+          </a>
+        </div>
+
         {/* System Legend */}
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mt-4">
           <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-3">System Legend</p>
@@ -221,6 +221,10 @@ export default async function Dashboard() {
               <div className="flex items-start gap-2">
                 <span className="text-base leading-none mt-0.5">⚖️</span>
                 <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">LP Pair</span> — $LIL liquidity provided on Pharaoh Exchange.</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-base leading-none mt-0.5">🐔</span>
+                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Circulating</span> — Supply currently held in user wallets (idle).</p>
               </div>
             </div>
           </div>
