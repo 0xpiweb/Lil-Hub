@@ -85,17 +85,15 @@ export default async function Dashboard() {
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight">🏰 $LIL Stats Hub</h1>
-          <p className="text-zinc-400 mt-1 text-sm">
-            Total Supply: <span className="text-white font-medium">1,350,000,000 $LIL</span>
-            <span className="inline-flex items-center gap-1.5 ml-2">
-  <span className="relative flex h-2 w-2">
-    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-  </span>
-  <span className="text-zinc-500 uppercase text-[10px] tracking-widest font-bold">
-    Live Network
-  </span>
-</span>
+          <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
+            <span>Total Supply: <span className="text-white font-medium">1,350,000,000 $LIL</span></span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="text-zinc-500 uppercase text-[10px] tracking-widest font-bold">Live Network</span>
+            </span>
           </p>
         </div>
 
