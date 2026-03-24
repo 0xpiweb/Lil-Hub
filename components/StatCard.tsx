@@ -32,7 +32,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
       <div className="flex items-center justify-between">
         <span className="text-zinc-400 text-sm font-medium flex items-center gap-1.5">
           {iconSrc
-            ? <Image src={iconSrc} alt={label} width={20} height={20} className="rounded-full object-cover" />
+            ? <div className="rounded-full overflow-hidden w-5 h-5 flex-shrink-0"><Image src={iconSrc} alt={label} width={20} height={20} className="object-cover w-full h-full" /></div>
             : <span>{icon}</span>
           }
           {label}
@@ -60,7 +60,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
 
       {provenance && (
         <span
-          className="absolute bottom-3 right-3 text-base opacity-20 select-none"
+          className="absolute bottom-3 right-3 text-base opacity-80 select-none"
           title="Sourced from Fortifi Moat"
         >
           {provenance}

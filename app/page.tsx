@@ -86,7 +86,9 @@ export default async function Dashboard() {
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
-            <Image src="/lil-mascot.jpeg" alt="$LIL mascot" width={36} height={36} className="rounded-full object-cover" />
+            <div className="rounded-full overflow-hidden w-10 h-10 flex-shrink-0">
+              <Image src="/lil-mascot.png" alt="$LIL mascot" width={40} height={40} className="object-cover w-full h-full" />
+            </div>
             $LIL Stats Hub
           </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
@@ -107,7 +109,7 @@ export default async function Dashboard() {
           <StatCard icon="🔥" label="Burned"      value={stats.burned}      pct={stats.burnedPct}      delta={delta.burned}      provenance="🏰" />
           <StatCard icon="💀" label="Dead Wallet" value={stats.dead}        pct={stats.deadPct}        delta={delta.dead}        />
           <StatCard icon="⚖️" label="LP Pair"     value={stats.lp}          pct={stats.lpPct}          delta={delta.lp}          />
-          <StatCard icon="" iconSrc="/lil-token.jpeg" label="Circulating" value={stats.circulating} pct={stats.circulatingPct} delta={delta.circulating} />
+          <StatCard icon="" iconSrc="/lil-token.png" label="Circulating" value={stats.circulating} pct={stats.circulatingPct} delta={delta.circulating} />
         </div>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
