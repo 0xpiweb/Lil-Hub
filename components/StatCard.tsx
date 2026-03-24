@@ -7,6 +7,7 @@ interface StatCardProps {
   delta?: number | null;
   wide?: boolean;
   provenance?: string;
+  provenanceSrc?: string; // optional image for provenance badge
 }
 
 function fmt(n: number): string {
@@ -24,7 +25,7 @@ function DeltaChip({ delta }: { delta: number }) {
   );
 }
 
-export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide, provenance }: StatCardProps) {
+export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide, provenance, provenanceSrc }: StatCardProps) {
   return (
     <div className={`relative bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col gap-2 ${wide ? 'col-span-2' : ''}`}>
       <div className="flex items-center justify-between">
@@ -63,6 +64,14 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
         >
           {provenance}
         </span>
+      )}
+      {provenanceSrc && (
+        <img
+          src={provenanceSrc}
+          alt="source"
+          className="absolute bottom-3 right-3 h-4 w-4 rounded-sm opacity-70 select-none"
+          title="Pharaoh Exchange"
+        />
       )}
     </div>
   );
