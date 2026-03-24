@@ -5,6 +5,7 @@ interface StatCardProps {
   pct: string;
   delta?: number | null;
   wide?: boolean;
+  provenance?: string;
 }
 
 function fmt(n: number): string {
@@ -22,9 +23,9 @@ function DeltaChip({ delta }: { delta: number }) {
   );
 }
 
-export default function StatCard({ icon, label, value, pct, delta, wide }: StatCardProps) {
+export default function StatCard({ icon, label, value, pct, delta, wide, provenance }: StatCardProps) {
   return (
-    <div className={`bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col gap-2 ${wide ? 'col-span-2' : ''}`}>
+    <div className={`relative bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col gap-2 ${wide ? 'col-span-2' : ''}`}>
       <div className="flex items-center justify-between">
         <span className="text-zinc-400 text-sm font-medium flex items-center gap-1.5">
           <span>{icon}</span> {label}
@@ -49,6 +50,15 @@ export default function StatCard({ icon, label, value, pct, delta, wide }: StatC
           <span className="text-zinc-600 text-xs">Awaiting first snapshot</span>
         )}
       </div>
+
+      {provenance && (
+        <span
+          className="absolute bottom-3 right-3 text-base opacity-20 select-none"
+          title="Sourced from Fortifi Moat"
+        >
+          {provenance}
+        </span>
+      )}
     </div>
   );
 }

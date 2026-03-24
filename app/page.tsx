@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { fetchMoatEvents } from '@/lib/fetchMoatEvents';
 import { fetchChainBalances } from '@/lib/fetchChainBalances';
 import { supabase, LilStatsRow } from '@/lib/supabase';
@@ -84,7 +85,10 @@ export default async function Dashboard() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold tracking-tight">🏰 $LIL Stats Hub</h1>
+          <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
+            <Image src="/lil-logo.jpeg" alt="$LIL" width={36} height={36} className="rounded-full" />
+            $LIL Stats Hub
+          </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
             <span>Total Supply: <span className="text-white font-medium">1,350,000,000 $LIL</span></span>
             <span className="inline-flex items-center gap-1.5">
@@ -98,16 +102,16 @@ export default async function Dashboard() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-          <StatCard icon="🏰" label="Staked" value={stats.staked} pct={stats.stakedPct} delta={delta.staked} />
-          <StatCard icon="🔐" label="Locked" value={stats.locked} pct={stats.lockedPct} delta={delta.locked} />
-          <StatCard icon="🔥" label="Burned" value={stats.burned} pct={stats.burnedPct} delta={delta.burned} />
-          <StatCard icon="💀" label="Dead Wallet" value={stats.dead} pct={stats.deadPct} delta={delta.dead} />
-          <StatCard icon="🥣" label="LP Pair" value={stats.lp} pct={stats.lpPct} delta={delta.lp} />
+          <StatCard icon="🏛️" label="Staked"      value={stats.staked}      pct={stats.stakedPct}      delta={delta.staked}      provenance="🏰" />
+          <StatCard icon="🔐" label="Locked"      value={stats.locked}      pct={stats.lockedPct}      delta={delta.locked}      provenance="🏰" />
+          <StatCard icon="🔥" label="Burned"      value={stats.burned}      pct={stats.burnedPct}      delta={delta.burned}      provenance="🏰" />
+          <StatCard icon="💀" label="Dead Wallet" value={stats.dead}        pct={stats.deadPct}        delta={delta.dead}        />
+          <StatCard icon="⚖️" label="LP Pair"     value={stats.lp}          pct={stats.lpPct}          delta={delta.lp}          />
           <StatCard icon="💰" label="Circulating" value={stats.circulating} pct={stats.circulatingPct} delta={delta.circulating} />
         </div>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <span className="text-zinc-400 text-sm font-medium">📊 Total Removed from Circulation</span>
+          <span className="text-zinc-400 text-sm font-medium">💎 Total Removed from Circulation</span>
           <div className="flex items-center gap-3">
             <span className="text-white text-xl font-bold">
               {Math.round(stats.totalRemoved).toLocaleString('en-US')} $LIL
