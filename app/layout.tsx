@@ -15,17 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: '$LIL Hub',
   description: 'Live ecosystem terminal for $LIL',
-  icons: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      url: '/token.png',
-    },
-    {
-      rel: 'apple-touch-icon',
-      url: '/token.png',
-    },
-  ],
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+      // Adding a version query forces a refresh if you ever change it again
+      { url: '/favicon.png?v=2', type: 'image/png' }, 
+    ],
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
