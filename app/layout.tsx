@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "$LIL Stats Hub",
+  title: "$LIL Hub",
   description: "Live supply and moat metrics for the $LIL token ecosystem",
 };
 

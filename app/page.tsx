@@ -106,7 +106,7 @@ export default async function Dashboard() {
             <div className="h-10 w-10 min-w-[40px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center">
               <img src="/mascot.png" className="h-full w-full object-cover" alt="mascot" />
             </div>
-            $LIL Stats Hub
+            $LIL Hub
           </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
             <span>Total Supply: <span className="text-white font-medium">1,350,000,000 $LIL</span></span>
