@@ -7,17 +7,19 @@ interface Segment {
 }
 
 export default function SupplyBar({
-  staked, locked, burned, dead, lp, circulating,
+  staked, locked, dead, lp, circulating,
 }: {
-  staked: number; locked: number; burned: number;
-  dead: number;   lp: number;    circulating: number;
+  staked: number; 
+  locked: number; 
+  dead: number; 
+  lp: number; 
+  circulating: number;
 }) {
   const segments: Segment[] = [
-    { label: 'Staked',      value: staked,      color: 'bg-blue-500'    },
-    { label: 'Locked',      value: locked,      color: 'bg-violet-500'  },
-    { label: 'Burned',      value: burned,      color: 'bg-orange-500'  },
-    { label: 'Dead',        value: dead,        color: 'bg-red-600'     },
-    { label: 'LP',          value: lp,          color: 'bg-yellow-500'  },
+    { label: 'Staked',     value: staked,      color: 'bg-blue-500'   },
+    { label: 'Locked',     value: locked,      color: 'bg-violet-500' },
+    { label: 'Dead',       value: dead,        color: 'bg-red-600'    },
+    { label: 'LP',         value: lp,          color: 'bg-yellow-500' },
     { label: 'Circulating', value: circulating, color: 'bg-emerald-600' },
   ];
 
