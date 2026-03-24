@@ -106,13 +106,13 @@ export default async function Dashboard() {
           <StatCard icon="🏛️" label="Staked"      value={stats.staked}      pct={stats.stakedPct}      delta={delta.staked}      provenance="🏰" />
           <StatCard icon="🔐" label="Locked"      value={stats.locked}      pct={stats.lockedPct}      delta={delta.locked}      provenance="🏰" />
           <StatCard icon="🔥" label="Burned"      value={stats.burned}      pct={stats.burnedPct}      delta={delta.burned}      provenance="🏰" />
-          <StatCard icon="💀" label="Dead Wallet" value={stats.dead}        pct={stats.deadPct}        delta={delta.dead}        />
+          <StatCard icon="🔥" label="Total Burned" value={stats.dead}        pct={stats.deadPct}        delta={delta.dead}        provenance="💀" />
           <StatCard icon="⚖️" label="LP Pair"     value={stats.lp}          pct={stats.lpPct}          delta={delta.lp}          />
           <StatCard icon="" iconSrc="/token.png" label="Circulating" value={stats.circulating} pct={stats.circulatingPct} delta={delta.circulating} />
         </div>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <span className="text-zinc-400 text-sm font-medium">💰 Total Removed from Circulation</span>
+          <span className="text-zinc-400 text-sm font-medium">💰 $LIL Not in Circulation</span>
           <div className="flex items-center gap-3">
             <span className="text-white text-xl font-bold">
               {Math.round(stats.totalRemoved).toLocaleString('en-US')} $LIL

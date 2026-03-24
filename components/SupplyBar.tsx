@@ -18,7 +18,7 @@ export default function SupplyBar({
   const segments: Segment[] = [
     { label: 'Staked',     value: staked,      color: 'bg-blue-500'   },
     { label: 'Locked',     value: locked,      color: 'bg-violet-500' },
-    { label: 'Dead',       value: dead,        color: 'bg-red-600'    },
+    { label: 'Total Burned', value: dead,        color: 'bg-red-600'    },
     { label: 'LP',         value: lp,          color: 'bg-yellow-500' },
     { label: 'Circulating', value: circulating, color: 'bg-emerald-600' },
   ];
