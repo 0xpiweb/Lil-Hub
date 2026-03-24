@@ -69,7 +69,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
         <img
           src={provenanceSrc}
           alt="source"
-          className="absolute bottom-3 right-3 h-4 w-4 rounded-sm opacity-70 select-none"
+          className="absolute bottom-3 right-3 h-[14px] w-[14px] opacity-100 select-none rounded-sm"
           title="Pharaoh Exchange"
         />
       )}
