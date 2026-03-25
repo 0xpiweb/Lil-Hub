@@ -212,7 +212,7 @@ export default async function Dashboard() {
               <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Burned</span> — $LIL burned via The Moat.</p>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-base leading-none mt-0.5 flex-shrink-0">🔥💀</span>
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">💀</span>
               <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Total Burned</span> — Cumulative $LIL sent to the dead wallet.</p>
             </div>
             <div className="flex items-start gap-2">
