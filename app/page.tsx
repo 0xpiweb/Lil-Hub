@@ -159,17 +159,17 @@ export default async function Dashboard() {
           ];
           return (
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4">
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <span className="text-emerald-400 text-2xl font-bold tracking-tight">
+              <div className="flex flex-wrap items-center gap-2 mb-6">
+                <span className="text-emerald-400 text-lg font-bold tracking-tight leading-none">
                   {Math.round(moatTotal).toLocaleString('en-US')}
-                  <span className="text-zinc-400 text-base font-normal ml-1">$LIL</span>
+                  <span className="text-zinc-400 text-sm font-normal ml-1">$LIL</span>
                 </span>
-                <span className="text-zinc-400 text-sm font-medium">Secured in Moat</span>
-                <span className="border border-emerald-600 text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap">
+                <span className="text-zinc-400 text-sm font-medium leading-none">Secured in Moat</span>
+                <span className="border border-emerald-600 text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap leading-none">
                   {moatPct}% of 1.35B
                 </span>
               </div>
-              <p className="text-zinc-300 text-xs font-medium mb-2">Supply Distribution</p>
+              <p className="text-gray-200 text-sm font-medium mb-3">Supply Distribution</p>
               <div className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3">
                 {segments.map((s) => (
                   <div
