@@ -110,7 +110,7 @@ export default async function Dashboard() {
             <span className="neon-title">$LIL Hub</span>
           </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
-            <span>Total Supply: <span className="font-medium" style={{ color: '#A100FF' }}>1,350,000,000 $LIL</span></span>
+            <span>Total Supply: <span className="font-medium" style={{ color: '#A100FF', textShadow: '0 0 8px rgba(161,0,255,0.6)' }}>1,350,000,000 $LIL</span></span>
             <span className="inline-flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -170,7 +170,7 @@ export default async function Dashboard() {
                   {moatPct}% of 1.35B
                 </span>
               </div>
-              <p className="text-gray-400 text-xs font-medium tracking-wider mb-3">Supply Distribution</p>
+              <p className="text-zinc-400 text-sm font-medium mb-3">Supply Distribution</p>
               <div
                 className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3"
                 style={{
