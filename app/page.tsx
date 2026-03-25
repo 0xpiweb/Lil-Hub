@@ -94,7 +94,7 @@ export default async function Dashboard() {
     month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'
   });
 
-  const btnBase = 'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-colors';
+  const btnBase = 'inline-flex items-center gap-1.5 px-4 h-10 rounded-full text-sm font-medium border transition-colors [box-sizing:border-box]';
 
   return (
     <main className="min-h-screen bg-zinc-950 text-white">
@@ -209,7 +209,7 @@ export default async function Dashboard() {
         })()}
 
         {/* Action Bar */}
-        <div className="flex flex-wrap justify-center gap-2 py-6">
+        <div className="flex flex-wrap items-center justify-center gap-3 py-6">
           <a href={BUY_URL} target="_blank" rel="noopener noreferrer"
             className={`${btnBase} bg-emerald-950 hover:bg-emerald-900`} style={{ borderColor: '#00FF94', color: '#00FF94' }}>
             🛒 Buy $LIL
