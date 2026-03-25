@@ -36,7 +36,7 @@ export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide
           }
           {label}
         </span>
-        <span className="bg-emerald-950 text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full">
+        <span className="bg-emerald-950 text-xs font-semibold px-2 py-0.5 rounded-full" style={{ color: '#00FF94' }}>
           {pct}%
         </span>
       </div>
