@@ -127,7 +127,7 @@ export default async function Dashboard() {
             { label: 'Price AVAX',    value: priceAvax   ? priceAvax.toFixed(6) + ' AVAX' : '—' },
             { label: 'Liquidity',     value: liquidity   ? fmtUsd(liquidity)     : '—' },
             { label: 'Market Cap',    value: marketCap   ? fmtUsd(marketCap)     : '—' },
-            { label: 'Projected MC',  value: projectedMc ? fmtUsd(projectedMc)   : '—' },
+            { label: 'Fully Diluted MC',  value: projectedMc ? fmtUsd(projectedMc)   : '—' },
           ].map(({ label, value }) => (
             <div key={label} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-1">
               <span className="text-zinc-500 text-xs font-medium">{label}</span>
