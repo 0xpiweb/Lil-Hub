@@ -197,37 +197,33 @@ export default async function Dashboard() {
 
         {/* System Legend */}
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mt-4">
-          <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-3">System Legend</p>
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="flex-1 flex flex-col gap-3">
-              <div className="flex items-start gap-2">
-                <span className="text-base leading-none mt-0.5">🏛️</span>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Staked</span> — Amount of $LIL staked in The Moat.</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-base leading-none mt-0.5">🔐</span>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Locked</span> — Amount of $LIL locked in The Moat.</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-base leading-none mt-0.5">🔥</span>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Burned</span> — Amount of $LIL burned in The Moat.</p>
-              </div>
+          <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-4">System Legend</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">🏛️</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Staked</span> — $LIL actively staked in The Moat.</p>
             </div>
-            <div className="flex-1 flex flex-col gap-3">
-              <div className="flex items-start gap-2">
-                <span className="text-base leading-none mt-0.5">🔥</span>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Total Burned</span> — Cumulative total of $LIL burned.</p>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">🔐</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Locked</span> — $LIL locked in The Moat (time-locked).</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">🔥</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Burned</span> — $LIL burned via The Moat.</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">🔥💀</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Total Burned</span> — Cumulative $LIL sent to the dead wallet.</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-base leading-none mt-0.5 flex-shrink-0">⚖️</span>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">LP Pair</span> — $LIL liquidity on Pharaoh Exchange.</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="h-5 w-5 min-w-[20px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center mt-0.5">
+                <img src="/token.png" className="h-full w-full object-cover" alt="token" />
               </div>
-              <div className="flex items-start gap-2">
-                <span className="text-base leading-none mt-0.5">⚖️</span>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">LP Pair</span> — $LIL liquidity provided on Pharaoh Exchange.</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <div className="h-5 w-5 min-w-[20px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center mt-0.5">
-                  <img src="/token.png" className="h-full w-full object-cover" alt="token" />
-                </div>
-                <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Circulating</span> — Supply currently held in user wallets (idle).</p>
-              </div>
+              <p className="text-xs text-zinc-500"><span className="text-zinc-300 font-medium">Circulating</span> — Supply held in user wallets (idle).</p>
             </div>
           </div>
         </div>
