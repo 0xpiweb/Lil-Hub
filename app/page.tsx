@@ -227,11 +227,11 @@ export default async function Dashboard() {
             🔐 Lock
           </a>
           <a href={MOAT_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-orange-950 border-orange-700 text-orange-300 hover:bg-orange-900`}>
+            className={`${btnBase} bg-red-950 hover:bg-red-900`} style={{ borderColor: '#FF005C', color: '#FF005C' }}>
             🔥 Burn
           </a>
           <a href={BURN_URL} target="_blank" rel="noopener noreferrer"
-            className={`${btnBase} bg-red-950 border-red-800 text-red-300 hover:bg-red-900`}>
+            className={`${btnBase} bg-red-950 hover:bg-red-900`} style={{ borderColor: '#FF005C', color: '#FF005C' }}>
             💀 View Total Burn
           </a>
           <a href="https://dexscreener.com/avalanche/0x8acc49857a1259d25eb3ca0aa15b398d0e149ef2" target="_blank" rel="noopener noreferrer"
