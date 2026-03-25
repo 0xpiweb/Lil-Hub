@@ -106,7 +106,7 @@ export default async function Dashboard() {
             <div className="h-10 w-10 min-w-[40px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center">
               <img src="/mascot.png" className="h-full w-full object-cover" alt="mascot" />
             </div>
-            $LIL Hub
+            <span className="neon-title">$LIL Hub</span>
           </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
             <span>Total Supply: <span className="text-white font-medium">1,350,000,000 $LIL</span></span>
@@ -160,7 +160,7 @@ export default async function Dashboard() {
           return (
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
               <div className="flex flex-wrap items-center gap-2 mb-6">
-                <span className="text-emerald-400 text-lg font-bold tracking-tight leading-none">
+                <span className="neon-number text-lg font-bold tracking-tight leading-none">
                   {Math.round(moatTotal).toLocaleString('en-US')}
                   <span className="text-zinc-400 text-sm font-normal ml-1">$LIL</span>
                 </span>

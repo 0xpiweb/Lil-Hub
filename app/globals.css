@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  92%       { opacity: 1; }
+  93%       { opacity: 0.9; }
+  94%       { opacity: 1; }
+  96%       { opacity: 0.92; }
+  97%       { opacity: 1; }
+}
+
+.neon-title {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #A100FF,
+    0 0 20px #FF007A;
+  animation: neon-flicker 6s infinite;
+}
+
+.neon-number {
+  color: #00FF94;
+  text-shadow:
+    0 0 4px #00FF94,
+    0 0 10px rgba(0,255,148,0.6);
+}
