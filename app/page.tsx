@@ -193,6 +193,10 @@ export default async function Dashboard() {
             className={`${btnBase} bg-red-950 border-red-800 text-red-300 hover:bg-red-900`}>
             💀 View Total Burn
           </a>
+          <a href="https://dexscreener.com/avalanche/0x8acc49857a1259d25eb3ca0aa15b398d0e149ef2" target="_blank" rel="noopener noreferrer"
+            className={`${btnBase} bg-emerald-950 border-emerald-600 text-emerald-300 hover:bg-emerald-900`}>
+            📈 Live Chart
+          </a>
         </div>
 
         {/* System Legend */}
