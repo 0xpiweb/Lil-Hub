@@ -104,7 +104,7 @@ export default async function Dashboard() {
         <div className="mb-6">
           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
             <div className="h-10 w-10 min-w-[40px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center"
-              style={{ boxShadow: '0 0 10px #A100FF, 0 0 20px rgba(161,0,255,0.4)' }}>
+              style={{ boxShadow: '0 0 15px rgba(161,0,255,0.4)' }}>
               <img src="/mascot.png" className="h-full w-full object-cover" alt="mascot" />
             </div>
             <span className="neon-title">$LIL Hub</span>
@@ -113,8 +113,8 @@ export default async function Dashboard() {
             <span>Total Supply: <span className="font-medium" style={{ color: '#A100FF' }}>1,350,000,000 $LIL</span></span>
             <span className="inline-flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A100FF] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#A100FF]"></span>
               </span>
               <span className="text-zinc-500 uppercase text-[10px] tracking-widest font-bold">Live Network</span>
             </span>
