@@ -151,9 +151,11 @@ export default async function Dashboard() {
           const moatTotal = stats.staked + stats.locked + stats.burned;
           const moatPct   = (moatTotal / TOTAL_SUPPLY * 100).toFixed(2);
           const segments  = [
-            { label: 'Staked', value: stats.staked, color: 'bg-blue-500'   },
-            { label: 'Locked', value: stats.locked, color: 'bg-violet-500' },
-            { label: 'Burned', value: stats.burned, color: 'bg-red-500'    },
+            { label: 'Staked',      value: stats.staked,      color: 'bg-blue-500'    },
+            { label: 'Locked',      value: stats.locked,      color: 'bg-violet-500'  },
+            { label: 'Burned',      value: stats.burned,      color: 'bg-red-500'     },
+            { label: 'Liquidity',   value: stats.lp,          color: 'bg-yellow-500'  },
+            { label: 'Circulating', value: stats.circulating, color: 'bg-emerald-500' },
           ];
           return (
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4">
@@ -172,7 +174,7 @@ export default async function Dashboard() {
                   <div
                     key={s.label}
                     className={`${s.color} transition-all duration-500`}
-                    style={{ width: `${(s.value / moatTotal * 100).toFixed(4)}%` }}
+                    style={{ width: `${(s.value / TOTAL_SUPPLY * 100).toFixed(4)}%` }}
                     title={`${s.label}: ${s.value.toLocaleString('en-US')}`}
                   />
                 ))}
