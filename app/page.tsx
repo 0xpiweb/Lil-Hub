@@ -169,7 +169,7 @@ export default async function Dashboard() {
                   {moatPct}% of 1.35B
                 </span>
               </div>
-              <p className="text-gray-200 text-sm font-medium mb-3">Supply Distribution</p>
+              <p className="text-gray-400 text-xs font-medium tracking-wider mb-3">Supply Distribution</p>
               <div className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3">
                 {segments.map((s) => (
                   <div
