@@ -116,7 +116,7 @@ export default async function Dashboard() {
             <span className="neon-title">$LIL Hub</span>
           </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
-            <span>Total Supply: <span className="font-bold" style={{ color: '#A100FF', textShadow: '0 0 10px #A100FF, 0 0 20px rgba(161,0,255,0.8)' }}>1,350,000,000 $LIL</span></span>
+            <span>Total Supply: <span className="font-bold" style={{ color: '#A100FF' }}>1,350,000,000 $LIL</span></span>
             <span className="inline-flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -167,9 +167,9 @@ export default async function Dashboard() {
           return (
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
               <div className="flex flex-wrap items-center gap-2 mb-8">
-                <span className="text-lg font-bold tracking-tight leading-none" style={{ color: '#A100FF', textShadow: '0 0 8px rgba(161,0,255,0.6)' }}>
+                <span className="text-lg font-bold tracking-tight leading-none" style={{ color: '#A100FF' }}>
                   {Math.round(moatTotal).toLocaleString('en-US')}
-                  <span className="text-sm font-normal ml-1" style={{ color: '#A100FF', textShadow: '0 0 8px rgba(161,0,255,0.6)' }}>$LIL</span>
+                  <span className="text-sm font-normal ml-1" style={{ color: '#A100FF' }}>$LIL</span>
                 </span>
                 <span className="text-zinc-400 text-[11px] font-medium leading-none">Secured in Moat</span>
                 <span className="border border-emerald-600 text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap leading-none">
