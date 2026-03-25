@@ -151,21 +151,23 @@ export default async function Dashboard() {
           const moatTotal = stats.staked + stats.locked + stats.burned;
           const moatPct   = (moatTotal / TOTAL_SUPPLY * 100).toFixed(2);
           const segments  = [
-            { label: 'Staked',  value: stats.staked,  color: 'bg-blue-500'   },
-            { label: 'Locked',  value: stats.locked,  color: 'bg-violet-500' },
-            { label: 'Burned',  value: stats.burned,  color: 'bg-orange-500' },
+            { label: 'Staked', value: stats.staked, color: 'bg-blue-500'   },
+            { label: 'Locked', value: stats.locked, color: 'bg-violet-500' },
+            { label: 'Burned', value: stats.burned, color: 'bg-red-500'    },
           ];
           return (
-            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 mb-4">
-              <p className="text-zinc-400 text-xs font-medium uppercase tracking-widest mb-2">🏰 $LIL Secured in Moat</p>
-              <div className="flex items-baseline gap-2 mb-1">
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
                 <span className="text-white text-2xl font-bold tracking-tight">
                   {Math.round(moatTotal).toLocaleString('en-US')}
+                  <span className="text-zinc-500 text-base font-normal ml-1">$LIL</span>
                 </span>
-                <span className="text-zinc-500 text-sm font-normal">$LIL</span>
+                <span className="text-emerald-400 text-sm font-semibold">Secured in Moat</span>
+                <span className="ml-auto bg-emerald-950 text-emerald-400 text-xs font-semibold px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                  {moatPct}% of 1.35B target
+                </span>
               </div>
-              <p className="text-zinc-500 text-xs mb-3">{moatPct}% of 1.35B</p>
-              <div className="flex w-full h-2 rounded-full overflow-hidden gap-px mb-2">
+              <div className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3">
                 {segments.map((s) => (
                   <div
                     key={s.label}
@@ -175,7 +177,7 @@ export default async function Dashboard() {
                   />
                 ))}
               </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-1">
+              <div className="flex flex-wrap gap-x-5 gap-y-1">
                 {segments.map((s) => (
                   <div key={s.label} className="flex items-center gap-1.5 text-xs text-zinc-500">
                     <span className={`inline-block w-2 h-2 rounded-sm ${s.color}`} />
@@ -186,14 +188,6 @@ export default async function Dashboard() {
             </div>
           );
         })()}
-
-        <SupplyBar
-          staked={stats.staked}
-          locked={stats.locked}
-          dead={stats.dead}
-          lp={stats.lp}
-          circulating={stats.circulating}
-        />
 
         {/* Action Bar */}
         <div className="flex flex-wrap justify-center gap-2 py-6">
