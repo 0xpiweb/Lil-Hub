@@ -172,7 +172,7 @@ export default async function Dashboard() {
                   <span className="text-sm font-normal ml-1" style={{ color: '#A100FF' }}>$LIL</span>
                 </span>
                 <span className="text-zinc-400 text-[11px] font-medium leading-none">Secured in Moat</span>
-                <span className="border border-emerald-600 text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap leading-none">
+                <span className="border text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap leading-none" style={{ borderColor: '#00FF94', color: '#00FF94' }}>
                   {moatPct}% of 1.35B
                 </span>
               </div>
