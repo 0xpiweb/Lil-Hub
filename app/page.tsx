@@ -160,17 +160,17 @@ export default async function Dashboard() {
           ];
           return (
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
-              <div className="flex flex-wrap items-center gap-2 mb-6">
+              <div className="flex flex-wrap items-center gap-2 mb-8">
                 <span className="neon-number text-lg font-bold tracking-tight leading-none">
                   {Math.round(moatTotal).toLocaleString('en-US')}
                   <span className="neon-number text-sm font-normal ml-1">$LIL</span>
                 </span>
-                <span className="text-zinc-400 text-sm font-medium leading-none">Secured in Moat</span>
+                <span className="text-zinc-400 text-[11px] font-medium leading-none">Secured in Moat</span>
                 <span className="border border-emerald-600 text-emerald-400 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap leading-none">
                   {moatPct}% of 1.35B
                 </span>
               </div>
-              <p className="text-gray-400 text-xs font-medium tracking-wider mb-3">Supply Distribution</p>
+              <p className="text-gray-200 text-sm font-medium tracking-wider mb-3">Supply Distribution</p>
               <div
                 className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3"
                 style={{
