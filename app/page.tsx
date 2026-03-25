@@ -113,8 +113,8 @@ export default async function Dashboard() {
             <span>Total Supply: <span className="font-medium" style={{ color: '#A100FF' }}>1,350,000,000 $LIL</span></span>
             <span className="inline-flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A100FF] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#A100FF]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span className="text-zinc-500 uppercase text-[10px] tracking-widest font-bold">Live Network</span>
             </span>
@@ -170,7 +170,7 @@ export default async function Dashboard() {
                   {moatPct}% of 1.35B
                 </span>
               </div>
-              <p className="text-gray-200 text-sm font-medium tracking-wider mb-3">Supply Distribution</p>
+              <p className="text-gray-400 text-xs font-medium tracking-wider mb-3">Supply Distribution</p>
               <div
                 className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3"
                 style={{
