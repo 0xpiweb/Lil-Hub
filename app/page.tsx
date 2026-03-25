@@ -151,11 +151,11 @@ export default async function Dashboard() {
           const moatTotal = stats.staked + stats.locked + stats.burned;
           const moatPct   = (moatTotal / TOTAL_SUPPLY * 100).toFixed(2);
           const segments  = [
-            { label: 'Staked',      value: stats.staked,      color: 'bg-blue-500'    },
-            { label: 'Locked',      value: stats.locked,      color: 'bg-violet-500'  },
-            { label: 'Burned',      value: stats.burned,      color: 'bg-red-500'     },
-            { label: 'Liquidity',   value: stats.lp,          color: 'bg-yellow-500'  },
-            { label: 'Circulating', value: stats.circulating, color: 'bg-emerald-500' },
+            { label: 'Staked',      value: stats.staked,      gradient: 'linear-gradient(180deg,#00F0FF 0%,#0075FF 100%)', dot: '#00F0FF' },
+            { label: 'Locked',      value: stats.locked,      gradient: 'linear-gradient(180deg,#BC00FF 0%,#7000FF 100%)', dot: '#BC00FF' },
+            { label: 'Burned',      value: stats.burned,      gradient: 'linear-gradient(180deg,#FF005C 0%,#990037 100%)', dot: '#FF005C' },
+            { label: 'Liquidity',   value: stats.lp,          gradient: 'linear-gradient(180deg,#FFE600 0%,#FFB800 100%)', dot: '#FFE600' },
+            { label: 'Circulating', value: stats.circulating, gradient: 'linear-gradient(180deg,#00FF94 0%,#00C853 100%)', dot: '#00FF94' },
           ];
           return (
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
@@ -170,12 +170,21 @@ export default async function Dashboard() {
                 </span>
               </div>
               <p className="text-gray-400 text-xs font-medium tracking-wider mb-3">Supply Distribution</p>
-              <div className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3">
+              <div
+                className="flex w-full h-3 rounded-full overflow-hidden gap-px mb-3"
+                style={{
+                  filter: 'drop-shadow(0 0 8px rgba(0,255,148,0.2))',
+                  borderTop: '1px solid rgba(255,255,255,0.3)',
+                }}
+              >
                 {segments.map((s) => (
                   <div
                     key={s.label}
-                    className={`${s.color} transition-all duration-500`}
-                    style={{ width: `${(s.value / TOTAL_SUPPLY * 100).toFixed(4)}%` }}
+                    className="transition-all duration-500"
+                    style={{
+                      width: `${(s.value / TOTAL_SUPPLY * 100).toFixed(4)}%`,
+                      background: s.gradient,
+                    }}
                     title={`${s.label}: ${s.value.toLocaleString('en-US')}`}
                   />
                 ))}
@@ -183,7 +192,7 @@ export default async function Dashboard() {
               <div className="flex flex-wrap gap-x-5 gap-y-1">
                 {segments.map((s) => (
                   <div key={s.label} className="flex items-center gap-1.5 text-xs text-zinc-500">
-                    <span className={`inline-block w-2 h-2 rounded-sm ${s.color}`} />
+                    <span className="inline-block w-2 h-2 rounded-sm" style={{ background: s.dot }} />
                     {s.label} — {(s.value / TOTAL_SUPPLY * 100).toFixed(2)}%
                   </div>
                 ))}
