@@ -17,7 +17,7 @@ function fmt(n: number): string {
 function DeltaChip({ delta }: { delta: number }) {
   const positive = delta >= 0;
   const arrow    = positive ? '▲' : '▼';
-  const color    = positive ? 'text-emerald-400' : 'text-red-400';
+  const color    = positive ? 'text-[#00FF94]' : 'text-red-400';
   return (
     <span className={`text-xs font-medium ${color}`}>
       {arrow} {positive ? '+' : ''}{fmt(delta)}
