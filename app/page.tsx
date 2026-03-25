@@ -103,14 +103,20 @@ export default async function Dashboard() {
         {/* Header */}
         <div className="mb-6">
           <h1 className="text-3xl font-bold tracking-tight flex items-center gap-3">
-            <div className="h-10 w-10 min-w-[40px] rounded-full bg-white overflow-hidden flex-shrink-0 flex items-center justify-center"
-              style={{ boxShadow: '0 0 15px rgba(161,0,255,0.4)' }}>
-              <img src="/mascot.png" className="h-full w-full object-cover" alt="mascot" />
+            <div className="relative flex-shrink-0">
+              <div className="absolute inset-0 rounded-full pointer-events-none" style={{
+                background: 'radial-gradient(circle, rgba(161,0,255,0.4) 0%, rgba(161,0,255,0) 70%)',
+                filter: 'blur(8px)',
+                transform: 'scale(1.8)',
+              }} />
+              <div className="h-10 w-10 min-w-[40px] rounded-full bg-white overflow-hidden flex items-center justify-center relative">
+                <img src="/mascot.png" className="h-full w-full object-cover" alt="mascot" />
+              </div>
             </div>
             <span className="neon-title">$LIL Hub</span>
           </h1>
           <p className="text-zinc-400 mt-1 text-sm flex items-center gap-2 flex-wrap">
-            <span>Total Supply: <span className="font-medium" style={{ color: '#A100FF', textShadow: '0 0 8px rgba(161,0,255,0.6)' }}>1,350,000,000 $LIL</span></span>
+            <span>Total Supply: <span className="font-bold" style={{ color: '#A100FF', textShadow: '0 0 10px #A100FF, 0 0 20px rgba(161,0,255,0.8)' }}>1,350,000,000 $LIL</span></span>
             <span className="inline-flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
