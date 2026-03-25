@@ -129,7 +129,7 @@ export default async function Dashboard() {
             { label: 'Market Cap',    value: marketCap   ? fmtUsd(marketCap)     : '—' },
             { label: 'Fully Diluted MC',  value: projectedMc ? fmtUsd(projectedMc)   : '—' },
           ].map(({ label, value }) => (
-            <div key={label} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-1">
+            <div key={label} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-1 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
               <span className="text-zinc-500 text-xs font-medium">{label}</span>
               <span className="text-white text-base font-bold tracking-tight">{value}</span>
             </div>
@@ -158,7 +158,7 @@ export default async function Dashboard() {
             { label: 'Circulating', value: stats.circulating, color: 'bg-emerald-500' },
           ];
           return (
-            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4">
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mb-4 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
               <div className="flex flex-wrap items-center gap-2 mb-6">
                 <span className="text-emerald-400 text-lg font-bold tracking-tight leading-none">
                   {Math.round(moatTotal).toLocaleString('en-US')}
@@ -225,7 +225,7 @@ export default async function Dashboard() {
         </div>
 
         {/* System Legend */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mt-4">
+        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 mt-4 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)]">
           <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-4">System Legend</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-start gap-2">

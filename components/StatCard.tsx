@@ -27,7 +27,7 @@ function DeltaChip({ delta }: { delta: number }) {
 
 export default function StatCard({ icon, iconSrc, label, value, pct, delta, wide, provenance, provenanceSrc }: StatCardProps) {
   return (
-    <div className={`relative bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col gap-2 ${wide ? 'col-span-2' : ''}`}>
+    <div className={`relative bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col gap-2 transition-all duration-300 ease-in-out hover:border-[#A100FF] hover:shadow-[0_0_15px_rgba(161,0,255,0.4)] ${wide ? 'col-span-2' : ''}`}>
       <div className="flex items-center justify-between">
         <span className="text-zinc-400 text-sm font-medium flex items-center gap-1.5">
           {iconSrc
