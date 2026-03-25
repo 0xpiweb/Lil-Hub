@@ -236,7 +236,7 @@ export default async function Dashboard() {
           </a>
           <a href="https://dexscreener.com/avalanche/0x8acc49857a1259d25eb3ca0aa15b398d0e149ef2" target="_blank" rel="noopener noreferrer"
             className={`${btnBase} bg-emerald-950 border-emerald-600 text-emerald-300 hover:bg-emerald-900`}>
-            📈 Live Chart
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00FF94" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg> Live Chart
           </a>
         </div>
 
