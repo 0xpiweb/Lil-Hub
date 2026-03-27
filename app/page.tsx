@@ -98,7 +98,7 @@ export default async function Dashboard() {
 
   return (
     <main className="min-h-screen bg-zinc-950 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-10">
+      <div className="max-w-6xl mx-auto px-4 py-10 pb-20">
 
         {/* Header */}
         <div className="mb-6">
@@ -284,9 +284,9 @@ export default async function Dashboard() {
           href="https://supercycle-hub.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium shadow-lg transition-all duration-200 hover:scale-105 hover:border-white/40 hover:bg-white/15"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium shadow-lg transition-all duration-200 hover:scale-105 hover:border-white/40 hover:bg-white/15"
         >
-          <div className="h-5 w-5 rounded-full overflow-hidden flex-shrink-0">
+          <div className="h-4 w-4 rounded-full overflow-hidden flex-shrink-0">
             <img src="/super.png" className="h-full w-full object-cover" alt="SUPER" />
           </div>
           $SUPER Hub
@@ -295,9 +295,9 @@ export default async function Dashboard() {
           href="https://freak-hub.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium shadow-lg transition-all duration-200 hover:scale-105 hover:border-white/40 hover:bg-white/15"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium shadow-lg transition-all duration-200 hover:scale-105 hover:border-white/40 hover:bg-white/15"
         >
-          <div className="h-5 w-5 rounded-full overflow-hidden flex-shrink-0">
+          <div className="h-4 w-4 rounded-full overflow-hidden flex-shrink-0">
             <img src="/logo-freak.png" className="h-full w-full object-cover" alt="FREAK" />
           </div>
           $FREAK Hub
