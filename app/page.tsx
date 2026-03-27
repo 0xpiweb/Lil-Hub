@@ -279,8 +279,8 @@ export default async function Dashboard() {
       </div>
 
       {/* Ecosystem nav footer */}
-      <footer className="border-t border-white/5 bg-white/[0.03] py-6">
-        <p className="text-center text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-3">Ecosystem</p>
+      <footer className="border-t border-white/5 bg-white/[0.03] pt-4 pb-6">
+        <p className="text-center text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-5">The Moat Ecosystem</p>
         <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-2">
           <a
             href="https://supercycle-hub.vercel.app"
